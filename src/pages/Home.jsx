@@ -16,9 +16,9 @@ function Home() {
     let rotation = [0.1, 4.7, 0]
 
     if (window.innerWidth < 768) {
-      screenScale = [3, 3, 3]
+      screenScale = [4, 4, 4]
     } else {
-      screenScale = [3, 3, 3]
+      screenScale = [4, 4, 4]
     }
     return [screenScale, screenPosition, rotation]
   }
@@ -28,7 +28,7 @@ function Home() {
   return (
     <section className="w-full h-screen relative">
       <Canvas
-        className="w-full h-screen bg-black"
+        className="w-full h-screen bg-zinc-950"
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
