@@ -56,7 +56,7 @@ function Space({ isRotating, setIsRotating, ...props }) {
 
   useFrame(() => {
     if (isRotatingRef.current) {
-      spaceRef.current.rotation.y += 0.0005
+      spaceRef.current.rotation.y += 0.0002
     } else if (!isRotatingRef.current) {
       spaceRef.current.rotation.y += 0.01
     }
