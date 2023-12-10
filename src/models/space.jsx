@@ -4,9 +4,64 @@ import { useFrame, useThree } from "@react-three/fiber"
 import { a } from "@react-spring/three"
 import spaceScene from "../assets/space.glb"
 
-function Space(props) {
+function Space({ isRotating, setIsRotating, ...props }) {
   const spaceRef = useRef()
+  const isRotatingRef = useRef(false)
+
+  const { gl, viewport } = useThree()
   const { nodes, materials } = useGLTF(spaceScene)
+
+  // const lastX = useRef(0)
+  // const rotationSpeed = useRef(0)
+
+  useEffect(() => {
+    isRotatingRef.current = true
+    const handlePointerDown = () => {
+      isRotatingRef.current = !isRotatingRef.current // Toggle rotation
+    }
+
+    // const handlePointerUp = () => {
+    //   e.stopPropagation()
+    //   e.preventDefault()
+    //   setIsRotating(false)
+    // }
+
+    // const handlePointerMove = (e) => {
+    //   e.stopPropagation()
+    //   e.preventDefault()
+
+    //   if (isRotatingRef.current) {
+    //     const clientX = e.touches ? e.touches[0].clientX : e.clientX
+    //     const delta = (clientX - lastX.current) / viewport.width
+
+    //     spaceRef.current.rotation.y += delta * 0.01 * Math.PI
+
+    //     lastX.current = clientX
+
+    //     rotationSpeed.current = delta * 0.01 * Math.PI
+    //   }
+    // }
+
+    const canvas = gl.domElement
+    canvas.addEventListener("pointerdown", handlePointerDown)
+    // canvas.addEventListener("pointerup", handlePointerUp)
+    // canvas.addEventListener("pointermove", handlePointerMove)
+
+    return () => {
+      canvas.removeEventListener("pointerdown", handlePointerDown)
+      // canvas.removeEventListener("pointerup", handlePointerUp)
+      // canvas.removeEventListener("pointermove", handlePointerMove)
+    }
+  }, [gl, viewport])
+
+  useFrame(() => {
+    if (isRotatingRef.current) {
+      spaceRef.current.rotation.y += 0.0005
+    } else if (!isRotatingRef.current) {
+      spaceRef.current.rotation.y += 0.01
+    }
+  })
+
   return (
     <a.group ref={spaceRef} {...props}>
       <a.group scale={0.01}>

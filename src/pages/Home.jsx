@@ -1,7 +1,7 @@
-import { Suspense } from "react"
+import { Suspense, useState } from "react"
 import { Canvas } from "@react-three/fiber"
 import Loader from "../components/Loader"
-import Space from "../models/space"
+import Space from "../models/Space"
 
 {
   /* {<div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
@@ -10,13 +10,15 @@ import Space from "../models/space"
 }
 
 function Home() {
+  const [isRotating, setIsRotating] = useState(true)
+
   const adjustSpaceForScreenSize = () => {
     let screenScale = null
-    let screenPosition = [0, -6.5, -43]
-    let rotation = [0.1, 4.7, 0]
+    let screenPosition = [0, -5, -43]
+    let rotation = [1, 6, 0]
 
     if (window.innerWidth < 768) {
-      screenScale = [4, 4, 4]
+      screenScale = [3, 3, 3]
     } else {
       screenScale = [4, 4, 4]
     }
@@ -28,7 +30,9 @@ function Home() {
   return (
     <section className="w-full h-screen relative">
       <Canvas
-        className="w-full h-screen bg-zinc-950"
+        className={`w-full h-screen bg-black $ ${
+          isRotating ? "cursor-grabbing" : "cursor-grab"
+        }`}
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
@@ -45,6 +49,8 @@ function Home() {
             rotation={spaceRotation}
             position={spacePosition}
             scale={spaceScale}
+            isRotating={isRotating}
+            setIsRotating={setIsRotating}
           />
         </Suspense>
       </Canvas>
