@@ -35,7 +35,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .blue-gradient_text {
-    @apply bg-gradient-to-r from-[hsl(211,25%,39%)] to-[#1d39ab] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#ffffff] to-[rgb(83,84,88)] bg-clip-text text-transparent;
   }
 
   .input {
