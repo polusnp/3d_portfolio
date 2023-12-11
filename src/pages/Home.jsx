@@ -16,7 +16,7 @@ function Home() {
     if (window.innerWidth < 768) {
       screenScale = [3, 3, 3]
     } else {
-      screenScale = [4, 4, 4]
+      screenScale = [3.6, 3.6, 3.6]
     }
     return [screenScale, screenPosition, rotation]
   }
