@@ -3,10 +3,12 @@ import { Canvas } from "@react-three/fiber"
 import Loader from "../components/Loader"
 import Space from "../models/Space"
 import HomeInfo from "../components/HomeInfo"
+import StartInfo from "../components/StartInfo"
 
 function Home() {
   const [isRotating, setIsRotating] = useState(false)
-  const [currentStage, setCurrentStage] = useState(1)
+  const [currentStage, setCurrentStage] = useState(null)
+  const [startInfo, setStartInfo] = useState(true)
 
   const adjustSpaceForScreenSize = () => {
     let screenScale = null
@@ -25,8 +27,11 @@ function Home() {
 
   return (
     <section className="w-full h-screen relative">
+      {startInfo && <StartInfo />}
       <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center blue-gradient_text">
-        {currentStage && <HomeInfo currentStage={currentStage} />}
+        {currentStage && (
+          <HomeInfo currentStage={currentStage} setStartInfo={setStartInfo} />
+        )}
       </div>
       <Canvas
         className={`w-full h-screen bg-black $ ${

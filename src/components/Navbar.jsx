@@ -14,12 +14,12 @@ function Navbar() {
       </a>
       <NavLink
         to="/"
-        className="flex text-3xl gap-7 font-medium"
+        className="flex text-2xl gap-7 font-medium sm:text-xl sm:leading-snug"
         // className="w-16 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md"
       >
         <p className="blue-gradient_text">Home</p>
       </NavLink>
-      <nav className="flex text-3xl gap-7 font-medium">
+      <nav className="flex text-2xl gap-7 font-medium sm:text-xl sm:leading-snug">
         <NavLink
           to="/about"
           className={({ isActive }) =>

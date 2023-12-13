@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import arrow from "../assets/arrow.png"
 
@@ -14,9 +15,7 @@ const InfoBox = ({ text, link, btnText }) => (
 const renderContent = {
   1: (
     <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue px-8 text-white mx-5">
-      Welcome to my universe. I'm Pavlo - JavaScript developer from Ukraine.
-      <br />
-      Spin to learn more ...
+      Hi! I'm Pavlo - a JavaScript developer from Ukraine.
       <br />
       <br />
       Support Ukraine against Russian Aggression. You can help Ukrainian
@@ -41,23 +40,21 @@ const renderContent = {
       btnText="About me"
     />
   ),
-  3: (
+  4: (
     <InfoBox
       text="Better engineering solutions for projects"
       link="/projects"
       btnText="My portfolio"
     />
   ),
-  4: (
-    <InfoBox
-      text="React developer with automotive industrial engineering expierence background"
-      link="/about"
-      btnText="About me"
-    />
-  ),
+  3: <InfoBox text="Contact" link="/about" btnText="Contact" />,
 }
 
-function HomeInfo({ currentStage }) {
+function HomeInfo({ currentStage, setStartInfo }) {
+  useEffect(() => {
+    setStartInfo(false)
+  }, []) // Запустити ефект тільки після першого рендерингу
+
   return renderContent[currentStage] || null
 }
 
