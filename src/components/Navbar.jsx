@@ -7,19 +7,19 @@ function Navbar() {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        className="cursor-pointer w-16"
+        className="cursor-pointer sm:w-16 w-12"
         href="https://standwithukraine.com.ua/"
       >
         <img className="rounded-md flex" src={banner} alt="image" />
       </a>
       <NavLink
         to="/"
-        className="flex text-2xl gap-7 font-medium sm:text-xl sm:leading-snug"
+        className="flex text-lg sm:text-2xl font-medium "
         // className="w-16 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md"
       >
         <p className="blue-gradient_text">Home</p>
       </NavLink>
-      <nav className="flex text-2xl gap-7 font-medium sm:text-xl sm:leading-snug">
+      <nav className="flex text-lg sm:text-2xl sm:gap-7 gap-6 font-medium ">
         <NavLink
           to="/about"
           className={({ isActive }) =>
