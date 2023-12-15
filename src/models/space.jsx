@@ -158,9 +158,10 @@ function Space({
         case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
           setCurrentStage(2)
           break
-        case normalizedRotation >= 2 && normalizedRotation <= 2.2:
-          setCurrentStage(5)
+        case normalizedRotation >= 0.1 && normalizedRotation <= 0.5:
+          setCurrentStage(1)
           break
+
         default:
           setCurrentStage(null)
       }
