@@ -14,16 +14,18 @@ function Navbar() {
       </a>
       <NavLink
         to="/"
-        className="flex text-lg sm:text-2xl font-medium "
+        className="flex text-lg sm:text-2xl font-medium transition-transform duration-500 transform hover:-translate-y-1"
         // className="w-16 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md"
       >
-        <p className="blue-gradient_text">Home</p>
+        <p className="blue-gradient_text hover:text-white">Home</p>
       </NavLink>
       <nav className="flex text-lg sm:text-2xl sm:gap-7 gap-6 font-medium ">
         <NavLink
           to="/about"
           className={({ isActive }) =>
-            isActive ? "text-slate-600" : "blue-gradient_text"
+            isActive
+              ? "text-white"
+              : "blue-gradient_text hover:text-white transition-transform duration-500 transform hover:-translate-y-1"
           }
         >
           About
@@ -31,7 +33,9 @@ function Navbar() {
         <NavLink
           to="/works"
           className={({ isActive }) =>
-            isActive ? "text-slate-600" : "blue-gradient_text"
+            isActive
+              ? "text-white"
+              : "blue-gradient_text hover:text-white transition-transform duration-500 transform hover:-translate-y-1"
           }
         >
           Works
@@ -39,7 +43,9 @@ function Navbar() {
         <NavLink
           to="/contact"
           className={({ isActive }) =>
-            isActive ? "text-slate-600" : "blue-gradient_text"
+            isActive
+              ? "text-white"
+              : "blue-gradient_text hover:text-white transition-transform duration-500 transform hover:-translate-y-1"
           }
         >
           Contact
