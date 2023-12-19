@@ -4,14 +4,14 @@ import banner from "../assets/banner.jpg"
 function Navbar() {
   return (
     <header className="header">
-      <a
+      {/* <a
         target="_blank"
         rel="noopener noreferrer"
         className="cursor-pointer sm:w-16 w-12"
         href="https://standwithukraine.com.ua/"
       >
         <img className="rounded-md flex" src={banner} alt="image" />
-      </a>
+      </a> */}
       <NavLink
         to="/"
         className="flex text-lg sm:text-2xl font-medium transition-transform duration-500 transform hover:-translate-y-1"

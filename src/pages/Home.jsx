@@ -12,13 +12,16 @@ function Home() {
 
   const adjustSpaceForScreenSize = () => {
     let screenScale = null
-    let screenPosition = [0, -5, -43]
-    let rotation = [0.5, 6, 0]
+    let screenPosition = [0, 0, -150]
+    let rotation = [0, 0, 0]
+
+    // let screenPosition = [0, -5, -43]
+    // let rotation = [0.5, 6, 0]
 
     if (window.innerWidth < 768) {
-      screenScale = [3, 3, 3]
+      screenScale = [1, 1, 1]
     } else {
-      screenScale = [3.6, 3.6, 3.6]
+      screenScale = [0.4, 0.4, 0.4]
     }
     return [screenScale, screenPosition, rotation]
   }
@@ -34,20 +37,20 @@ function Home() {
         )}
       </div>
       <Canvas
-        className={`w-full h-screen bg-black $ ${
+        className={`w-full h-screen bg-transparent $ ${
           isRotating ? "cursor-grabbing" : "cursor-grab"
         }`}
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
-          <directionalLight position={[1, 1, 1]} intensity={2} />
-          <ambientLight intensity={0.5} />
+          <directionalLight position={[1, 6, 5]} intensity={1} />
+          <ambientLight intensity={10} />
 
-          <hemisphereLight
+          {/* <hemisphereLight
             skyColor="#b1e1ff"
             groundColor="#000000"
             intensity={1}
-          />
+          /> */}
 
           <Space
             rotation={spaceRotation}
