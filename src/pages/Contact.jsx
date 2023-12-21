@@ -1,8 +1,9 @@
 import React, { useState, useRef } from "react"
 import emailjs from "@emailjs/browser"
+import Map from "../components/Map"
 
 function Contact() {
-  const formRef = useRef(null)
+  const formRef = useRef()
   const [form, setForm] = useState({ name: "", email: "", message: "" })
   const [isLoading, setIsLoading] = useState(false)
 
@@ -43,19 +44,20 @@ function Contact() {
   const handleBlur = () => {}
 
   return (
-    <section className="relative flex lg:flex-row flex-col max-container">
-      <div className="flex-1 min-w-[50%] flex flex-col">
-        <h1 className="head-text ">Get in touch</h1>
+    <section className="relative flex h-screen bg-[url('./assets/bg-contact.jpg')] bg-cover ">
+      <div className="lg:w-[70%] flex flex-col font-sans p-24 pt-28 pr-36">
+        <h1 className="head-text">Get in touch</h1>
         <form
-          className="w-full flex flex-col gap-7 mt-14"
+          ref={formRef}
+          className="w-full flex flex-col gap-4 mt-4 text-sm"
           onSubmit={handleSubmit}
         >
-          <label className="text-white font-semibold">
+          <label className="text-white font-semibold text-sm">
             Name
             <input
               type="text"
               name="name"
-              className="input"
+              className="input text-sm"
               placeholder="John"
               required
               value={form.name}
@@ -64,12 +66,12 @@ function Contact() {
               onBlur={handleBlur}
             />
           </label>
-          <label className="text-white font-semibold">
+          <label className="text-white font-semibold text-sm">
             Email
             <input
               type="email"
               name="email"
-              className="input"
+              className="input text-sm"
               placeholder="john@gmail.com"
               required
               value={form.email}
@@ -78,12 +80,12 @@ function Contact() {
               onBlur={handleBlur}
             />
           </label>
-          <label className="text-white font-semibold">
+          <label className="text-white font-semibold text-sm">
             Your message
             <textarea
               name="message"
               rows={4}
-              className="textarea"
+              className="textarea text-sm"
               placeholder="Let me know how I can help you"
               required
               value={form.message}
@@ -94,7 +96,7 @@ function Contact() {
           </label>
           <button
             type="submit"
-            className="btn"
+            className="btn text-sm"
             disabled={isLoading}
             onFocus={handleFocus}
             onBlur={handleBlur}
@@ -103,6 +105,7 @@ function Contact() {
           </button>
         </form>
       </div>
+      <Map className="flex-grow relative" />
     </section>
   )
 }

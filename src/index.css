@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Dancing+Script:wght@400;500;600&family=Orbitron&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700&family=Titillium+Web:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Black+Ops+One&family=Dancing+Script:wght@400;500;600&family=Orbitron&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700&family=Titillium+Web:wght@300;400;600&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -10,7 +11,7 @@
 }
 
 body {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Audiowide", sans-serif;
 }
 
 body:has(.card[data-color="blue"]:hover) {
@@ -23,11 +24,11 @@ body:has(.card[data-color="green"]:hover) {
 
 @layer utilities {
   .max-container {
-    @apply bg-gradient-to-br from-[rgb(0,0,0)] to-[rgb(66,67,69)] max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
+    @apply max-w-full mx-auto sm:p-10 pb-12 !pt-[109px] px-8;
   }
 
   .head-text {
-    @apply sm:text-5xl text-white text-3xl font-semibold sm:leading-snug font-poppins;
+    @apply sm:text-3xl text-white text-2xl font-semibold sm:leading-snug font-poppins;
   }
 
   .subhead-text {
@@ -35,11 +36,11 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .blue-gradient_text {
-    @apply bg-gradient-to-r from-[#ffffff] to-[rgb(83,84,88)] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-sky-100 to-sky-600 bg-clip-text text-transparent;
   }
 
   .input {
-    @apply bg-white border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal shadow-card;
+    @apply bg-white border border-gray-200 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 mt-2 font-normal shadow-card;
   }
 
   .textarea {
@@ -47,11 +48,11 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .btn {
-    @apply text-white bg-gradient-to-r from-[rgb(255,255,255)] to-[rgb(23,23,23)] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
+    @apply text-white bg-pink-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
   }
 
   .header {
-    @apply flex justify-between items-center sm:px-16 px-2 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
+    @apply flex justify-between items-center sm:justify-around sm:px-16 px-2 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
   }
 
   .footer {
@@ -169,16 +170,16 @@ body:has(.card[data-color="green"]:hover) {
 .neo-brutalism-blue {
   background: hsl(0, 0%, 0%);
   position: relative;
-  opacity: 70%;
+  opacity: 50%;
   border-radius: 10px;
   border: hsl(216, 42%, 87%);
-  box-shadow: 0.6vmin 0.6vmin hsl(220, 13%, 86%), 1vmin 1vmin hsl(0, 0%, 68%),
-    1vmin 1vmin #0092db, 0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
+  /* box-shadow: 0.6vmin 0.6vmin hsl(220, 13%, 86%), 1vmin 1vmin hsl(0, 0%, 68%),
+    1vmin 1vmin #0092db, 0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db; */
 }
 
 .neo-brutalism-white {
   background: #fff;
   border: #fff;
-  box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
-    0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
+  /* box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
+    0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff; */
 }

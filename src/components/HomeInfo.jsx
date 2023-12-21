@@ -47,7 +47,13 @@ const renderContent = {
       btnText="My portfolio"
     />
   ),
-  3: <InfoBox text="Contact" link="/about" btnText="Contact" />,
+  3: (
+    <InfoBox
+      text="Get in touch for cooperation"
+      link="/contact"
+      btnText="Contact"
+    />
+  ),
 }
 
 function HomeInfo({ currentStage, setStartInfo }) {

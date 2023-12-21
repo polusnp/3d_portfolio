@@ -14,41 +14,41 @@ function Navbar() {
       </a> */}
       <NavLink
         to="/"
-        className="flex text-lg sm:text-2xl font-medium transition-transform duration-500 transform hover:-translate-y-1"
+        className="flex text-lg sm:text-xl font-medium transition-transform duration-500 transform hover:-translate-y-1"
         // className="w-16 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md"
       >
-        <p className="blue-gradient_text hover:text-white">Home</p>
+        <p className="blue-gradient_text hover:text-sky-100">HOME</p>
       </NavLink>
-      <nav className="flex text-lg sm:text-2xl sm:gap-7 gap-6 font-medium ">
+      <nav className="flex text-lg sm:text-xl sm:gap-7 gap-4 font-medium ">
         <NavLink
           to="/about"
           className={({ isActive }) =>
             isActive
-              ? "text-white"
-              : "blue-gradient_text hover:text-white transition-transform duration-500 transform hover:-translate-y-1"
+              ? "text-sky-100"
+              : "blue-gradient_text hover:text-sky-100 transition-transform duration-500 transform hover:-translate-y-1"
           }
         >
-          About
+          ABOUT
         </NavLink>
         <NavLink
           to="/works"
           className={({ isActive }) =>
             isActive
-              ? "text-white"
-              : "blue-gradient_text hover:text-white transition-transform duration-500 transform hover:-translate-y-1"
+              ? "text-sky-100"
+              : "blue-gradient_text hover:text-sky-100 transition-transform duration-500 transform hover:-translate-y-1"
           }
         >
-          Works
+          WORKS
         </NavLink>
         <NavLink
           to="/contact"
           className={({ isActive }) =>
             isActive
-              ? "text-white"
-              : "blue-gradient_text hover:text-white transition-transform duration-500 transform hover:-translate-y-1"
+              ? "text-sky-100"
+              : "blue-gradient_text hover:text-sky-100 transition-transform duration-500 transform hover:-translate-y-1"
           }
         >
-          Contact
+          CONTACT
         </NavLink>
       </nav>
     </header>
