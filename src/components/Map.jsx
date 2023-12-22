@@ -9,18 +9,19 @@ import {
 
 const Map = () => {
   return (
+    // <div className="w-1/2 flex lg:w-full">
     <ComposableMap
       projection="geoAzimuthalEqualArea"
       projectionConfig={{
-        rotate: [0, -60.0, 8],
-        center: [10, -5],
-        scale: 1400,
+        rotate: [0, -40, 0],
+        center: [10, 15],
+        scale: 210,
       }}
     >
       <Geographies
         geography="/features.json"
         fill="#D6D6DA"
-        stroke="#FFFFFF"
+        stroke="#c026d3"
         strokeWidth={0.5}
       >
         {({ geographies }) =>
@@ -34,16 +35,17 @@ const Map = () => {
         dx={-90}
         dy={-30}
         connectorProps={{
-          stroke: "#FF5533",
+          stroke: "#c026d3",
           strokeWidth: 3,
           strokeLinecap: "round",
         }}
       >
-        <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="#F53">
+        <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="#f472b6">
           {"Ukraine"}
         </text>
       </Annotation>
     </ComposableMap>
+    // </div>
   )
 }
 

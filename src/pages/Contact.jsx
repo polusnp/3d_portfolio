@@ -44,15 +44,15 @@ function Contact() {
   const handleBlur = () => {}
 
   return (
-    <section className="relative flex h-screen bg-[url('./assets/bg-contact.jpg')] bg-cover ">
-      <div className="lg:w-[70%] flex flex-col font-sans p-24 pt-28 pr-36">
+    <section className="relative flex sm:flex-row flex-col justify-between sm:h-screen bg-[url('./assets/bg-contact.jpg')] bg-cover">
+      <div className="lg:w-3/4 sm:w-1/2 w-full flex flex-col font-sans p-12 pt-28">
         <h1 className="head-text">Get in touch</h1>
         <form
           ref={formRef}
-          className="w-full flex flex-col gap-4 mt-4 text-sm"
+          className="w-full flex flex-col gap-3 mt-4 text-xs"
           onSubmit={handleSubmit}
         >
-          <label className="text-white font-semibold text-sm">
+          <label className="text-white font-semibold text-xs">
             Name
             <input
               type="text"
@@ -66,7 +66,7 @@ function Contact() {
               onBlur={handleBlur}
             />
           </label>
-          <label className="text-white font-semibold text-sm">
+          <label className="text-white font-semibold text-xs">
             Email
             <input
               type="email"
@@ -80,12 +80,12 @@ function Contact() {
               onBlur={handleBlur}
             />
           </label>
-          <label className="text-white font-semibold text-sm">
+          <label className="text-white font-semibold text-xs">
             Your message
             <textarea
               name="message"
               rows={4}
-              className="textarea text-sm"
+              className="textarea text-xs"
               placeholder="Let me know how I can help you"
               required
               value={form.message}
@@ -96,7 +96,7 @@ function Contact() {
           </label>
           <button
             type="submit"
-            className="btn text-sm"
+            className="btn text-xs"
             disabled={isLoading}
             onFocus={handleFocus}
             onBlur={handleBlur}
@@ -105,7 +105,9 @@ function Contact() {
           </button>
         </form>
       </div>
-      <Map className="flex-grow relative" />
+      <div className="sm:flex sm:w-1/2 w-full pb-10">
+        <Map />
+      </div>
     </section>
   )
 }
