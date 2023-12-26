@@ -40,7 +40,15 @@ const Map = () => {
           strokeLinecap: "round",
         }}
       >
-        <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="#f472b6">
+        <text
+          x="-8"
+          textAnchor="end"
+          alignmentBaseline="middle"
+          fill="#c026d3"
+          fontSize="20"
+          fontFamily="sans-serif"
+          fontWeight="bold"
+        >
           {"Ukraine"}
         </text>
       </Annotation>

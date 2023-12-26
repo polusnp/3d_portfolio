@@ -1,11 +1,15 @@
 import React, { useState, useRef } from "react"
 import emailjs from "@emailjs/browser"
 import Map from "../components/Map"
+// import Alert from "../components/Alert"
+import useAlert from "../hooks/useAlert"
 
 function Contact() {
   const formRef = useRef()
   const [form, setForm] = useState({ name: "", email: "", message: "" })
   const [isLoading, setIsLoading] = useState(false)
+
+  const { alert, showAlert, hideAlert } = useAlert
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
@@ -29,13 +33,27 @@ function Contact() {
       )
       .then(() => {
         setIsLoading(false)
+        showAlert({
+          show: true,
+          text: "Message sent successfully",
+          type: "success",
+        })
+
+        setTimeout(() => {
+          hideAlert()
+        }, [3000])
+
         setForm({ name: "", email: "", message: "" })
         //todo: show success message and hide the alert
       })
       .catch((error) => {
         setIsLoading(false)
         console.log(error)
-        // todo: show error message
+        showAlert({
+          show: true,
+          text: "I didnt receive your message",
+          type: "danger",
+        })
       })
   }
 
@@ -45,6 +63,7 @@ function Contact() {
 
   return (
     <section className="relative flex sm:flex-row flex-col justify-between sm:h-screen bg-[url('./assets/bg-contact.jpg')] bg-cover">
+      {/* {alert.show && <Alert {...alert} />} */}
       <div className="lg:w-3/4 sm:w-1/2 w-full flex flex-col font-sans p-12 pt-28">
         <h1 className="head-text">Get in touch</h1>
         <form
