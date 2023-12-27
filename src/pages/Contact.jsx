@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react"
 import emailjs from "@emailjs/browser"
 import Map from "../components/Map"
-// import Alert from "../components/Alert"
+import Alert from "../components/Alert"
 import useAlert from "../hooks/useAlert"
 
 function Contact() {
@@ -9,7 +9,7 @@ function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" })
   const [isLoading, setIsLoading] = useState(false)
 
-  const { alert, showAlert, hideAlert } = useAlert
+  const { alert, showAlert, hideAlert } = useAlert()
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
@@ -57,13 +57,10 @@ function Contact() {
       })
   }
 
-  //Animation
-  const handleFocus = () => {}
-  const handleBlur = () => {}
-
   return (
-    <section className="relative flex sm:flex-row flex-col justify-between sm:h-screen bg-[url('./assets/bg-contact.jpg')] bg-cover">
-      {/* {alert.show && <Alert {...alert} />} */}
+    <section className="relative flex sm:flex-row flex-col justify-between  bg-[url('./assets/bg-contact.jpg')] bg-cover">
+      {alert.show && <Alert {...alert} />}
+
       <div className="lg:w-3/4 sm:w-1/2 w-full flex flex-col font-sans p-12 pt-28">
         <h1 className="head-text">Get in touch</h1>
         <form
@@ -81,8 +78,6 @@ function Contact() {
               required
               value={form.name}
               onChange={handleChange}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
             />
           </label>
           <label className="text-white font-semibold text-xs">
@@ -95,8 +90,6 @@ function Contact() {
               required
               value={form.email}
               onChange={handleChange}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
             />
           </label>
           <label className="text-white font-semibold text-xs">
@@ -109,17 +102,9 @@ function Contact() {
               required
               value={form.message}
               onChange={handleChange}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
             />
           </label>
-          <button
-            type="submit"
-            className="btn text-xs"
-            disabled={isLoading}
-            onFocus={handleFocus}
-            onBlur={handleBlur}
-          >
+          <button type="submit" className="btn text-xs" disabled={isLoading}>
             {isLoading ? "Sending..." : "Send Message"}
           </button>
         </form>
