@@ -23,16 +23,19 @@ body:has(.card[data-color="green"]:hover) {
 }
 
 @layer utilities {
+  .max-container-about {
+    @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
+  }
   .max-container {
     @apply max-w-full mx-auto sm:p-10 pb-12 !pt-[109px] px-8;
   }
 
   .head-text {
-    @apply sm:text-3xl text-white text-2xl font-semibold sm:leading-snug font-poppins;
+    @apply sm:text-3xl text-blue-100 text-2xl font-semibold sm:leading-snug font-poppins;
   }
 
   .subhead-text {
-    @apply font-semibold sm:text-3xl text-xl relative font-poppins;
+    @apply text-blue-100 font-semibold sm:text-3xl text-xl relative font-poppins;
   }
 
   .blue-gradient_text {
