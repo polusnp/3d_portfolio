@@ -24,7 +24,7 @@ body:has(.card[data-color="green"]:hover) {
 
 @layer utilities {
   .max-container-about {
-    @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
+    @apply max-w-4xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
   }
   .max-container {
     @apply max-w-full mx-auto sm:p-10 pb-12 !pt-[109px] px-8;
@@ -55,7 +55,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .header {
-    @apply flex justify-between items-center sm:justify-around sm:px-16 px-2 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
+    @apply flex justify-between items-center sm:justify-around sm:px-16 px-2 py-4 max-w-4xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
   }
 
   .footer {
