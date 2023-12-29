@@ -15,7 +15,8 @@ import sass from "./sass.svg"
 import tailwindcss from "./tailwindcss.svg"
 import typescript from "./typescript.svg"
 import linkedin from "./linkedin.svg"
-
+import meta from "./meta.png"
+import shopify from "./shopify.png"
 import estate from "./estate.svg"
 import pricewise from "./pricewise.svg"
 import snapgram from "./snapgram.svg"
@@ -52,4 +53,6 @@ export {
   contact,
   soundon,
   soundoff,
+  meta,
+  shopify,
 }

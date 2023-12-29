@@ -21,7 +21,7 @@ const Map = () => {
       <Geographies
         geography="/features.json"
         fill="#D6D6DA"
-        stroke="#c026d3"
+        stroke="#64748b"
         strokeWidth={0.5}
       >
         {({ geographies }) =>
@@ -35,7 +35,7 @@ const Map = () => {
         dx={-90}
         dy={-30}
         connectorProps={{
-          stroke: "#c026d3",
+          stroke: "#38bdf8",
           strokeWidth: 3,
           strokeLinecap: "round",
         }}
@@ -44,7 +44,7 @@ const Map = () => {
           x="-8"
           textAnchor="end"
           alignmentBaseline="middle"
-          fill="#c026d3"
+          fill="#38bdf8"
           fontSize="20"
           fontFamily="sans-serif"
           fontWeight="bold"

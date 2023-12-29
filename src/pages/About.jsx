@@ -1,8 +1,14 @@
-import { skills } from "../constants"
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component"
+import "react-vertical-timeline-component/style.min.css"
+
+import { skills, experiences } from "../constants"
 
 function About() {
   return (
-    <div className="bg-blue-950">
+    <div className="bg-[url('./assets/bg-contact.jpg')] bg-cover">
       <section className="max-container-about font-poppins">
         <h1 className="head-text ml-2">
           Hello, I'm{" "}
@@ -27,7 +33,7 @@ function About() {
           <h3 className="subhead-text ml-2">My skills</h3>
           <div className="mt-16 flex flex-wrap gap-12 ml-4">
             {skills.map((skill) => (
-              <div className="block-container w-16 h-16">
+              <div key={skill.name} className="block-container w-16 h-16">
                 <div className="btn-back rounded-xl" />
                 <div className="btn-front rounded-xl flex justify-center items-center">
                   <img
@@ -52,7 +58,17 @@ function About() {
               mastering JavaScript (React). Here is the rundown:
             </p>
           </div>
-          <div className="mt-12 flex"></div>
+          <div className="mt-12 flex">
+            <VerticalTimeline>
+              {experiences.map((expierence) => (
+                <VerticalTimelineElement key={expierence.company_name}>
+                  <div>
+                    <h3>{expierence.title}</h3>
+                  </div>
+                </VerticalTimelineElement>
+              ))}
+            </VerticalTimeline>
+          </div>
         </div>
       </section>
     </div>
