@@ -12,7 +12,7 @@ function Home() {
 
   const adjustSpaceForScreenSize = () => {
     let screenScale = null
-    let screenPosition = [0, 0, -150]
+    let screenPosition = [0, 0, -200]
     let rotation = [0, 0, 0]
 
     // let screenPosition = [0, -5, -43]
@@ -43,10 +43,9 @@ function Home() {
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
-          {/* <directionalLight position={[1, 6, 5]} intensity={1} />
-          <ambientLight intensity={10} /> */}
+          {/* <directionalLight position={[1, -1, -1]} intensity={1} />
 
-          {/* <hemisphereLight
+          <hemisphereLight
             skyColor="#b1e1ff"
             groundColor="#000000"
             intensity={1}

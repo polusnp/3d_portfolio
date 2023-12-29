@@ -10,12 +10,7 @@ function About() {
   return (
     <div className="bg-[url('./assets/bg-contact.jpg')] bg-cover">
       <section className="max-container-about font-poppins">
-        <h1 className="head-text ml-2">
-          Hello, I'm{" "}
-          <span className="blue-gradient_text font-semibold drop-shadow-sm">
-            Pavlo Nahurnyi
-          </span>
-        </h1>
+        <h1 className="head-text ml-2">Hello, I'm Pavlo Nahurnyi</h1>
         <div>
           <p className="mt-5 flex flex-col gap-3 text-blue-100 ml-2">
             React Developer from Ukraine with an industrial engineering
@@ -58,18 +53,56 @@ function About() {
               mastering JavaScript (React). Here is the rundown:
             </p>
           </div>
-          <div className="mt-12 flex">
+          <div className="mt-12 flex ml-2">
             <VerticalTimeline>
               {experiences.map((expierence) => (
-                <VerticalTimelineElement key={expierence.company_name}>
+                <VerticalTimelineElement
+                  key={expierence.id}
+                  date={expierence.date}
+                  icon={
+                    <div className="flex justify-center items-center w-full h-full">
+                      <img
+                        src={expierence.icon}
+                        alt={expierence.company_name}
+                        className="w-[60%] h-[60%] object-contain"
+                      />
+                    </div>
+                  }
+                  iconStyle={{ background: expierence.iconBg }}
+                  contentStyle={{
+                    borderBottom: "8px",
+                    borderStyle: "solid",
+                    borderBottomColor: expierence.iconBg,
+                    boxShadow: "none",
+                  }}
+                >
                   <div>
-                    <h3>{expierence.title}</h3>
+                    <h3 className="text-black text-xl font-poppins">
+                      {expierence.title}
+                    </h3>
+                    <p
+                      className="text-black-500 font-medium font-base"
+                      style={{ margin: 0 }}
+                    >
+                      {expierence.company_name}
+                    </p>
                   </div>
+                  <ul className="my-5 list-disc ml-5 space-y-2">
+                    {expierence.points.map((point, index) => (
+                      <li
+                        key={expierence.points[index]}
+                        className="text-black-500-/50 font-normal pl-1 text-sm"
+                      >
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
                 </VerticalTimelineElement>
               ))}
             </VerticalTimeline>
           </div>
         </div>
+        <hr className="border-slate-200" />
       </section>
     </div>
   )

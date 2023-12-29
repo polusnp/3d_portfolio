@@ -58,61 +58,63 @@ function Contact() {
   }
 
   return (
-    <section className="relative flex sm:flex-row flex-col justify-between  bg-[url('./assets/bg-contact.jpg')] bg-cover">
-      {alert.show && <Alert {...alert} />}
+    <div className="bg-[url('./assets/bg-contact.jpg')] bg-cover">
+      <section className="max-container relative flex sm:flex-row flex-col justify-between  ">
+        {alert.show && <Alert {...alert} />}
 
-      <div className="lg:w-3/4 sm:w-1/2 w-full flex flex-col font-sans p-12 pt-28">
-        <h1 className="head-text">Get in touch</h1>
-        <form
-          ref={formRef}
-          className="w-full flex flex-col gap-3 mt-4 text-xs"
-          onSubmit={handleSubmit}
-        >
-          <label className="text-white font-semibold text-xs">
-            Name
-            <input
-              type="text"
-              name="name"
-              className="input text-sm"
-              placeholder="John"
-              required
-              value={form.name}
-              onChange={handleChange}
-            />
-          </label>
-          <label className="text-white font-semibold text-xs">
-            Email
-            <input
-              type="email"
-              name="email"
-              className="input text-sm"
-              placeholder="john@gmail.com"
-              required
-              value={form.email}
-              onChange={handleChange}
-            />
-          </label>
-          <label className="text-white font-semibold text-xs">
-            Your message
-            <textarea
-              name="message"
-              rows={4}
-              className="textarea text-xs"
-              placeholder="Let me know how I can help you"
-              required
-              value={form.message}
-              onChange={handleChange}
-            />
-          </label>
-          <button type="submit" className="btn text-xs" disabled={isLoading}>
-            {isLoading ? "Sending..." : "Send Message"}
-          </button>
-        </form>
-      </div>
-      <div className="sm:flex sm:w-1/2 w-full pb-10">
-        <Map />
-      </div>
-    </section>
+        <div className="sm:w-1/2 w-full flex flex-col font-sans p-12 pt-8">
+          <h1 className="head-text">Get in touch</h1>
+          <form
+            ref={formRef}
+            className="w-full flex flex-col gap-3 mt-4 text-xs"
+            onSubmit={handleSubmit}
+          >
+            <label className="text-white font-semibold text-xs">
+              Name
+              <input
+                type="text"
+                name="name"
+                className="input text-sm"
+                placeholder="John"
+                required
+                value={form.name}
+                onChange={handleChange}
+              />
+            </label>
+            <label className="text-white font-semibold text-xs">
+              Email
+              <input
+                type="email"
+                name="email"
+                className="input text-sm"
+                placeholder="john@gmail.com"
+                required
+                value={form.email}
+                onChange={handleChange}
+              />
+            </label>
+            <label className="text-white font-semibold text-xs">
+              Your message
+              <textarea
+                name="message"
+                rows={4}
+                className="textarea text-xs"
+                placeholder="Let me know how I can help you"
+                required
+                value={form.message}
+                onChange={handleChange}
+              />
+            </label>
+            <button type="submit" className="btn text-xs" disabled={isLoading}>
+              {isLoading ? "Sending..." : "Send Message"}
+            </button>
+          </form>
+        </div>
+        <div className="sm:flex sm:w-1/2 w-full pb-10">
+          <Map />
+        </div>
+      </section>
+    </div>
   )
 }
 

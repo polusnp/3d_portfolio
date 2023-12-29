@@ -12,6 +12,18 @@
 
 body {
   font-family: "Audiowide", sans-serif;
+  /* to hide scrollbar for firefox */
+  scrollbar-width: 0em;
+  scrollbar-color: transparent transparent;
+}
+
+/* for Chrome, Safari */
+body::-webkit-scrollbar {
+  width: 0em;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
 }
 
 body:has(.card[data-color="blue"]:hover) {
@@ -27,7 +39,7 @@ body:has(.card[data-color="green"]:hover) {
     @apply max-w-4xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
   }
   .max-container {
-    @apply max-w-full mx-auto sm:p-10 pb-12 !pt-[109px] px-8;
+    @apply max-w-4xl mx-auto sm:p-16 pb-12 px-8;
   }
 
   .head-text {
@@ -55,7 +67,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .header {
-    @apply flex justify-between items-center sm:justify-around sm:px-16 px-2 py-4 max-w-4xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
+    @apply absolute flex justify-between items-center sm:justify-around sm:px-16 px-2 py-4 max-w-4xl mx-auto top-0 bg-transparent z-10 right-0 left-0;
   }
 
   .footer {

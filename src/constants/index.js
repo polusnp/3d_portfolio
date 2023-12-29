@@ -117,7 +117,9 @@ export const skills = [
 
 export const experiences = [
   {
-    title: "Web Developer",
+    id: 1,
+
+    title: "Process engineer",
     company_name: "Shopify",
     icon: shopify,
     iconBg: "#b7e4c7",
@@ -130,8 +132,25 @@ export const experiences = [
     ],
   },
   {
-    title: "Full stack Developer",
+    id: 2,
+
+    title: "Web Developer",
     company_name: "Meta",
+    icon: meta,
+    iconBg: "#a2d2ff",
+    date: "Jan 2023 - Present",
+    points: [
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+  {
+    id: 3,
+
+    title: "React Developer",
+    company_name: "Meta2",
     icon: meta,
     iconBg: "#a2d2ff",
     date: "Jan 2023 - Present",
