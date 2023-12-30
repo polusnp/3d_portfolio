@@ -3,7 +3,7 @@ import { FaHome, FaLinkedin, FaGithub } from "react-icons/fa"
 
 function FixedIconHome() {
   return (
-    <div className="fixed top-52 left-10 z-50  flex flex-col gap-10">
+    <div className="fixed top-52 left-6 z-50  flex flex-col gap-10">
       <Link to="/" className="text-sky-500 hover:text-white hover:animate-ping">
         <FaHome size={20} />
       </Link>

@@ -36,7 +36,7 @@ body:has(.card[data-color="green"]:hover) {
 
 @layer utilities {
   .max-container-about {
-    @apply max-w-4xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
+    @apply max-w-4xl mx-auto sm:p-16 pb-12 !pt-[126px] px-16 min-h-[calc(100vh-80px)];
   }
   .max-container {
     @apply max-w-4xl mx-auto sm:p-16 pb-12 px-8;
@@ -91,7 +91,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .cta-text {
-    @apply text-black-500 font-extrabold flex-1 text-2xl max-md:text-center;
+    @apply text-blue-100 font-extrabold flex-1 text-2xl max-md:text-center;
   }
 }
 

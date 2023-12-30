@@ -15,13 +15,8 @@ function About() {
         <div>
           <p className="mt-5 flex flex-col gap-3 text-blue-100 ml-2">
             React Developer from Ukraine with an industrial engineering
-            background in the automotive industry. <br /> <br />
-            Advanced problem-solving skills directed towards achieving strategic
-            goals. <br /> <br />
-            Enthusiastic about transitioning from a seasoned Industrial Engineer
-            to a skilled Developer. Eagerly pursuing opportunities to apply
-            programming skills and contribute to innovative projects in a
-            developer role.
+            background in the automotive industry. Advanced problem-solving
+            skills directed towards achieving strategic goals.
           </p>
         </div>
 

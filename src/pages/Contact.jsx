@@ -59,10 +59,10 @@ function Contact() {
 
   return (
     <div className="bg-[url('./assets/bg-contact.jpg')] bg-cover">
-      <section className="max-container relative flex sm:flex-row flex-col justify-between  ">
+      <section className="max-container relative flex sm:flex-row flex-col justify-between">
         {alert.show && <Alert {...alert} />}
 
-        <div className="sm:w-1/2 w-full flex flex-col font-sans p-12 pt-8">
+        <div className="sm:w-1/2 w-full flex flex-col font-sans p-12 pt-32 sm:pt-8">
           <h1 className="head-text">Get in touch</h1>
           <form
             ref={formRef}

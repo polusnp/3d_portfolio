@@ -14,7 +14,7 @@ const InfoBox = ({ text, link, btnText }) => (
 
 const renderContent = {
   1: (
-    <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue px-8 text-white mx-5">
+    <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue sm:px-8 px-2 text-white sm:mx-5 mx-14 font-poppins text-sm">
       Hi! I'm Pavlo - a JavaScript developer from Ukraine.
       <br />
       <br />
