@@ -4,8 +4,13 @@ import arrow from "../assets/arrow.png"
 
 const InfoBox = ({ text, link, btnText }) => (
   <div className="info-box">
-    <p className="font-medium sm:text-xl text-center">{text}</p>
-    <Link to={link} className="neo-brutalism-white neo-btn">
+    <p className="font-medium sm:text-lg text-center text-sm font-poppins">
+      {text}
+    </p>
+    <Link
+      to={link}
+      className="neo-brutalism-white neo-btn font-medium sm:text-lg text-center text-sm font-poppins"
+    >
       {btnText}
       <img src={arrow} className="w-6 h-6 object-contain" />
     </Link>
@@ -14,7 +19,7 @@ const InfoBox = ({ text, link, btnText }) => (
 
 const renderContent = {
   1: (
-    <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue sm:px-8 px-2 text-white sm:mx-5 mx-14 font-poppins text-sm">
+    <h1 className="sm:text-lg sm:leading-snug text-center neo-brutalism-blue sm:px-8 px-2 text-white sm:mx-5 mx-14 font-poppins text-sm">
       Hi! I'm Pavlo - a JavaScript developer from Ukraine.
       <br />
       <br />
@@ -26,7 +31,7 @@ const renderContent = {
         href="https://standwithukraine.com.ua/"
         target="_blank"
         rel="noopener noreferrer"
-        className="cursor-pointer text-red-600 font-bold"
+        className="cursor-pointer text-red-500 font-bold"
       >
         #Stand with Ukraine
       </a>{" "}

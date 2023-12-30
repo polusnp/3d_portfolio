@@ -9,7 +9,7 @@ import { skills, experiences } from "../constants"
 
 function About() {
   return (
-    <div className="bg-[url('./assets/bg-contact.jpg')] bg-cover">
+    <div className="bg-[url('./assets/bg-contact.jpg')] bg-cover scroll-behavior: smooth">
       <section className="max-container-about font-poppins">
         <h1 className="head-text ml-2">Hello, I'm Pavlo Nahurnyi</h1>
         <div>
@@ -54,7 +54,9 @@ function About() {
               {experiences.map((expierence) => (
                 <VerticalTimelineElement
                   key={expierence.id}
-                  date={expierence.date}
+                  date={
+                    <div className="text-white px-4">{expierence.date}</div>
+                  }
                   icon={
                     <div className="flex justify-center items-center w-full h-full">
                       <img

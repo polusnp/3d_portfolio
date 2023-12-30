@@ -15,6 +15,7 @@ import {
   //   nextjs,
   nodejs,
   pricewise,
+  ks,
   react,
   redux,
   sass,
@@ -25,6 +26,8 @@ import {
   typescript,
   meta,
   shopify,
+  fcc,
+  softserve,
 } from "../assets/icons"
 
 export const skills = [
@@ -120,9 +123,9 @@ export const experiences = [
     id: 1,
 
     title: "Process engineer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#b7e4c7",
+    company_name: "Kromberg & Schubert Ukraine",
+    icon: ks,
+    iconBg: "#a855f7",
     date: "Jan 2022 - Jan 2023",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
@@ -134,11 +137,11 @@ export const experiences = [
   {
     id: 2,
 
-    title: "Web Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#a2d2ff",
-    date: "Jan 2023 - Present",
+    title: "Web Dev student",
+    company_name: "freeCodeCamp",
+    icon: fcc,
+    iconBg: "#4b5563",
+    date: "Feb 2022 - Present",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -149,9 +152,9 @@ export const experiences = [
   {
     id: 3,
 
-    title: "React Developer",
-    company_name: "Meta2",
-    icon: meta,
+    title: "Practical React student",
+    company_name: "SoftServe",
+    icon: softserve,
     iconBg: "#a2d2ff",
     date: "Jan 2023 - Present",
     points: [

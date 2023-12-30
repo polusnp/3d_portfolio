@@ -4,7 +4,7 @@ import { FaHome, FaLinkedin, FaGithub } from "react-icons/fa"
 function FixedIconHome() {
   return (
     <div className="fixed top-52 left-6 z-50  flex flex-col gap-10">
-      <Link to="/" className="text-sky-500 hover:text-white hover:animate-ping">
+      <Link to="/" className="text-sky-500 hover:text-white">
         <FaHome size={20} />
       </Link>
       <Link
@@ -18,7 +18,7 @@ function FixedIconHome() {
       <Link
         target="_blank"
         rel="noopener noreferrer"
-        className="text-sky-500 hover:text-white"
+        className="text-sky-500 hover:text-white transition-transform duration-500 transform hover:-translate-y-1"
         to="https://github.com/polusnp"
       >
         <FaGithub size={20} />

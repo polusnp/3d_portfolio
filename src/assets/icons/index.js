@@ -22,10 +22,12 @@ import pricewise from "./pricewise.svg"
 import snapgram from "./snapgram.svg"
 import summiz from "./summiz.svg"
 import threads from "./threads.svg"
-
+import fcc from "./fcc.png"
 import contact from "./contact.svg"
 import soundon from "./soundon.png"
 import soundoff from "./soundoff.png"
+import softserve from "./softserve.png"
+import ks from "./ks.jpg"
 
 export {
   css,
@@ -34,7 +36,8 @@ export {
   github,
   html,
   javascript,
-  //   mongodb,
+  fcc,
+  softserve,
   motion,
   mui,
   //   nextjs,
@@ -42,6 +45,7 @@ export {
   react,
   redux,
   sass,
+  ks,
   tailwindcss,
   typescript,
   linkedin,
