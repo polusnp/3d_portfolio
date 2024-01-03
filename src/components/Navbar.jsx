@@ -10,7 +10,7 @@ function Navbar() {
       >
         <p className="blue-gradient_text hover:text-pink-300">HOME</p>
       </NavLink>
-      <nav className="flex text-lg sm:text-2xl gap-4 font-medium ">
+      <nav className="flex text-lg sm:text-2xl sm:gap-4 gap-6 font-medium ">
         <NavLink
           to="/about"
           className={({ isActive }) =>

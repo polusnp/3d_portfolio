@@ -10,6 +10,7 @@ const App = () => {
       <Router>
         <Navbar />
         <FixedIconHome />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

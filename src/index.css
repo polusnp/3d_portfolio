@@ -79,11 +79,11 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .info-box {
-    @apply sm:mx-5 mx-14 relative flex text-white flex-col gap-3 max-w-xl neo-brutalism-blue pt-1 pb-8 sm:px-8 px-2;
+    @apply mx-20 relative flex text-white flex-col gap-3 max-w-xl neo-brutalism-blue pt-2 pb-6 sm:px-8 px-2;
   }
 
   .neo-btn {
-    @apply py-1 px-6 rounded-lg text-black-500 text-center font-semibold sm:w-1/2 w-[90%] -bottom-4 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3;
+    @apply py-1 px-6 rounded-lg text-white text-center font-semibold sm:w-1/2 w-[90%] -bottom-4 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3;
   }
 
   .cta {
@@ -191,6 +191,9 @@ body:has(.card[data-color="green"]:hover) {
 }
 
 .neo-brutalism-white {
-  background: #f1f5f9;
-  border: #f1f5f9;
+  background: #db2777;
+}
+
+.neo-brutalism-white:hover {
+  background: #f9a8d4;
 }
