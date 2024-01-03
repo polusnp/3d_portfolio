@@ -9,7 +9,7 @@ const InfoBox = ({ text, link, btnText }) => (
     </p>
     <Link
       to={link}
-      className="neo-brutalism-white neo-btn font-medium sm:text-lg text-center text-sm font-poppins"
+      className="neo-brutalism-white neo-btn font-medium sm:text-base text-center text-xs font-poppins"
     >
       {btnText}
       <img src={arrow} className="w-6 h-6 object-contain" />

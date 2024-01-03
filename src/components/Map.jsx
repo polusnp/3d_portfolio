@@ -14,8 +14,8 @@ const Map = () => {
       projection="geoAzimuthalEqualArea"
       projectionConfig={{
         rotate: [0, -40, 0],
-        center: [10, 15],
-        scale: 210,
+        center: [0, 0],
+        scale: 200,
       }}
     >
       <Geographies
@@ -35,7 +35,7 @@ const Map = () => {
         dx={-90}
         dy={-30}
         connectorProps={{
-          stroke: "#38bdf8",
+          stroke: "#db2777",
           strokeWidth: 3,
           strokeLinecap: "round",
         }}
@@ -44,7 +44,7 @@ const Map = () => {
           x="-8"
           textAnchor="end"
           alignmentBaseline="middle"
-          fill="#38bdf8"
+          fill="#db2777"
           fontSize="20"
           fontFamily="sans-serif"
           fontWeight="bold"

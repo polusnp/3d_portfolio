@@ -4,10 +4,10 @@ import git from "./git.svg"
 import github from "./github.svg"
 import html from "./html.svg"
 import javascript from "./javascript.svg"
-// import mongodb from "./mongodb.svg"
+
 import motion from "./motion.svg"
 import mui from "./mui.svg"
-// import nextjs from "./nextjs.svg"
+
 import nodejs from "./nodejs.svg"
 import react from "./react.svg"
 import redux from "./redux.svg"
@@ -16,12 +16,9 @@ import tailwindcss from "./tailwindcss.svg"
 import typescript from "./typescript.svg"
 import linkedin from "./linkedin.svg"
 import meta from "./meta.png"
-import shopify from "./shopify.png"
-import estate from "./estate.svg"
-import pricewise from "./pricewise.svg"
-import snapgram from "./snapgram.svg"
-import summiz from "./summiz.svg"
-import threads from "./threads.svg"
+
+import quote from "./quote.png"
+
 import fcc from "./fcc.png"
 import contact from "./contact.svg"
 import soundon from "./soundon.png"
@@ -49,14 +46,9 @@ export {
   tailwindcss,
   typescript,
   linkedin,
-  estate,
-  pricewise,
-  snapgram,
-  summiz,
-  threads,
+  quote,
   contact,
   soundon,
   soundoff,
   meta,
-  shopify,
 }

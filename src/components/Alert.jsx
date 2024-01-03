@@ -10,7 +10,7 @@ function Alert({ type, text }) {
         <p
           className={`${
             type === "danger" ? "bg-red-400" : "bg-blue-400"
-          } flex rounded-full uppercase px-2 py-1 font-semibold mr-3 text-xs`}
+          } flex rounded-full uppercase px-2 py-1 mr-3 text-xs`}
         >
           {type === "danger" ? "Failed" : "Success"}
         </p>

@@ -58,11 +58,11 @@ function Contact() {
   }
 
   return (
-    <div className="bg-[url('./assets/bg-contact.jpg')] bg-cover h-[100vh]">
+    <div className="bg-[url('./assets/bg-contact.jpg')] bg-cover sm:h-[100vh] h-full">
       <section className="max-container relative flex sm:flex-row flex-col justify-between">
         {alert.show && <Alert {...alert} />}
 
-        <div className="sm:w-1/2 w-full flex flex-col font-sans pt-32 sm:pt-8">
+        <div className="sm:w-1/2 w-full flex flex-col font-sans pt-32 sm:pt-28 px-10 sm:px-0">
           <h1 className="head-text">Get in touch</h1>
           <form
             ref={formRef}
@@ -110,7 +110,7 @@ function Contact() {
             </button>
           </form>
         </div>
-        <div className="sm:flex sm:w-1/2 w-full pb-10">
+        <div className="sm:flex sm:w-1/2 w-full pt-36">
           <Map />
         </div>
       </section>

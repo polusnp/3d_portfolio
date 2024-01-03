@@ -3,25 +3,25 @@ import { FaHome, FaLinkedin, FaGithub } from "react-icons/fa"
 
 function FixedIconHome() {
   return (
-    <div className="fixed top-52 left-6 z-50  flex flex-col gap-10">
-      <Link to="/" className="text-sky-500 hover:text-white">
-        <FaHome size={20} />
+    <div className="fixed top-60 left-6 z-50  flex flex-col gap-16">
+      <Link to="/" className="text-pink-600 shadow-xl hover:text-pink-300">
+        <FaHome size={24} />
       </Link>
       <Link
         target="_blank"
         rel="noopener noreferrer"
-        className="text-sky-500 hover:text-white"
+        className="text-pink-600 shadow-xl hover:text-pink-300"
         to="https://www.linkedin.com/in/pavlo-nahurnyi-705641248?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BuJZgGs3rTROcoXgNJiUyLQ%3D%3D"
       >
-        <FaLinkedin size={20} />
+        <FaLinkedin size={24} />
       </Link>
       <Link
         target="_blank"
         rel="noopener noreferrer"
-        className="text-sky-500 hover:text-white transition-transform duration-500 transform hover:-translate-y-1"
+        className="text-pink-600 shadow-xl hover:text-pink-300"
         to="https://github.com/polusnp"
       >
-        <FaGithub size={20} />
+        <FaGithub size={24} />
       </Link>
     </div>
   )

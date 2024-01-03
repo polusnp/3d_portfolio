@@ -72,12 +72,12 @@ function Space({
       if (!isRotating) setIsRotating(true)
 
       spaceRef.current.rotation.y += 0.005 * Math.PI
-      rotationSpeed.current = 0.007
+      rotationSpeed.current = 0.0125
     } else if (event.key === "ArrowRight") {
       if (!isRotating) setIsRotating(true)
 
       spaceRef.current.rotation.y -= 0.005 * Math.PI
-      rotationSpeed.current = -0.007
+      rotationSpeed.current = -0.0125
     }
   }
 

@@ -1,7 +1,6 @@
 import {
   contact,
   css,
-  estate,
   express,
   git,
   github,
@@ -14,18 +13,13 @@ import {
   mui,
   //   nextjs,
   nodejs,
-  pricewise,
+  quote,
   ks,
   react,
   redux,
   sass,
-  snapgram,
-  summiz,
   tailwindcss,
-  threads,
   typescript,
-  meta,
-  shopify,
   fcc,
   softserve,
 } from "../assets/icons"
@@ -186,35 +180,28 @@ export const socialLinks = [
 
 export const projects = [
   {
-    iconUrl: pricewise,
+    iconUrl: quote,
     theme: "btn-back-red",
-    name: "Amazon Price Tracker",
+    name: "Quote Generator Machine",
     description:
-      "Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.",
-    link: "https://github.com/adrianhajdin/pricewise",
+      "In pursuit of my FreeCodeCamp certification, I developed a Quotes Generator Machine. This project allowed me to deepen my understanding of React components, state management, and API integration. It's not just a code exercise; it's a testament to my commitment to mastering React for real-world applications.",
+    link: "https://github.com/polusnp/random-quote-machine.git",
   },
   {
-    iconUrl: threads,
+    iconUrl: quote,
     theme: "btn-back-green",
-    name: "Full Stack Threads Clone",
+    name: "Drum Machine",
     description:
-      'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
+      "As part of the FreeCodeCamp curriculum, I created a Drum Machine that demonstrates my proficiency in handling user interactions and events in React. This project enabled me to delve into responsive design and create an engaging user experience.",
     link: "https://github.com/adrianhajdin/threads",
   },
-  //   {
-  //     iconUrl: car,
-  //     theme: "btn-back-blue",
-  //     name: "Car Finding App",
-  //     description:
-  //       "Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.",
-  //     link: "https://github.com/adrianhajdin/project_next13_car_showcase",
-  //   },
+
   {
-    iconUrl: snapgram,
+    iconUrl: quote,
     theme: "btn-back-pink",
-    name: "Full Stack Instagram Clone",
+    name: "Pomodoro Timer",
     description:
-      "Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.",
+      "To enhance my skills in stateful applications, I developed a Pomodoro Timer. This project challenged me to implement countdown functionality, session management, and an intuitive user interface. It reflects my dedication to creating practical tools that improve productivity.",
     link: "https://github.com/adrianhajdin/social_media_app",
   },
 ]
