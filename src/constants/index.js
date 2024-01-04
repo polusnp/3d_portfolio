@@ -120,12 +120,13 @@ export const experiences = [
     company_name: "Kromberg & Schubert Ukraine",
     icon: ks,
     iconBg: "#a855f7",
-    date: "Jan 2022 - Jan 2023",
+    date: "Jun 2009 - present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Workplace and process optimisation, working time measurement.",
+      "Supply of production.",
+      "Processing of current and scheduled changes to working documents.",
+      "Implementation of lean production.",
+      "Project management.",
     ],
   },
   {
@@ -137,25 +138,38 @@ export const experiences = [
     iconBg: "#4b5563",
     date: "Feb 2022 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Responsive web design.",
+      "JavaScripts algorithms and data structures.",
+      "Front End development libraries (BootStrap, JQuery, SASS, React).",
     ],
   },
   {
     id: 3,
 
     title: "Practical React student",
-    company_name: "SoftServe",
+    company_name: "SoftServe Academy",
     icon: softserve,
     iconBg: "#a2d2ff",
     date: "Jan 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Create React App. JSX, Styles",
+      "JS for React (pure functions, destructurization, map, spread",
+      "React - Key, State, Props, Events",
+      "OOP in JS",
+      "React - Lifecycle & Binding Event Handlers",
+      "Advanced JS (Asynchronous JS, Closures, Exceptions)",
+      "React Virtual DOM, Hooks (useState, useEffect)",
+      "Storage(local/session), Web workers, Service workers, Web socket",
+      "Composition, Context (useContext, useCallback Hook)",
+      "React State Management",
+      "Redux in React/ Redux Toolkit",
+      "Tools (npm, linter, babel, webpack)",
+      "React Router",
+      "Node, Fetch, Axios",
+      "Refs, Higher-Order Component, DefaultProps",
+      "Tests (Jest, react-testing-library as main)",
+      "MUI for React",
+      "Error Handling in React (Error Boundaries), creating custom Hooks",
     ],
   },
 ]
@@ -203,5 +217,29 @@ export const projects = [
     description:
       "To enhance my skills in stateful applications, I developed a Pomodoro Timer. This project challenged me to implement countdown functionality, session management, and an intuitive user interface. It reflects my dedication to creating practical tools that improve productivity.",
     link: "https://github.com/adrianhajdin/social_media_app",
+  },
+]
+
+export const highlight = [
+  { id: 1, skill: "React fundamentals, JSX, and styling" },
+  {
+    id: 2,
+    skill:
+      "Strong JavaScript foundation (pure functions, destructuring, mapping)",
+  },
+  {
+    id: 3,
+    skill: "Proficient in React concepts (State, Props, Events, Hooks)",
+  },
+  { id: 4, skill: "Object-Oriented Programming (OOP) in JavaScript" },
+  { id: 5, skill: "React lifecycle, event handling, and advanced JS concepts" },
+  { id: 6, skill: "State management with Redux and Redux Toolkit" },
+  { id: 7, skill: "Web technologies, storage, and service workers" },
+  { id: 8, skill: "Composition, Context API, and React Router" },
+  { id: 9, skill: "API integration (Node, Fetch, Axios)" },
+  { id: 10, skill: "Testing with jest and react-testing-library" },
+  {
+    id: 11,
+    skill: "Material-UI (MUI) for React and error handling strategies",
   },
 ]

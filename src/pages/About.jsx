@@ -5,7 +5,7 @@ import {
 import "react-vertical-timeline-component/style.min.css"
 import CTA from "../components/CTA"
 
-import { skills, experiences } from "../constants"
+import { skills, experiences, highlight } from "../constants"
 
 function About() {
   return (
@@ -13,16 +13,19 @@ function About() {
       <section className="max-container-about font-poppins">
         <h1 className="head-text ml-2">Hello, I'm Pavlo Nahurnyi</h1>
         <div>
-          <p className="mt-5 flex flex-col gap-3 text-blue-100 ml-2">
+          <p className="mt-5 flex flex-col gap-3 text-blue-100 ml-2 text-base">
             React Developer from Ukraine with an industrial engineering
-            background in the automotive industry. Advanced problem-solving
-            skills directed towards achieving strategic goals.
+            background in the automotive industry. <br /> <br />
+            Advanced problem-solving skills directed towards achieving strategic
+            goals. Well-organised person, loyal employee and friendly
+            personality. <br /> <br />
+            Fan of bycicle ride, fishing, music audiophile.
           </p>
         </div>
 
         <div className="py-10 flex flex-col">
           <h3 className="subhead-text ml-2">My skills</h3>
-          <div className="mt-16 flex flex-wrap gap-12 ml-4">
+          <div className="mt-16 flex flex-wrap gap-12 justify-center">
             {skills.map((skill) => (
               <div key={skill.name} className="block-container w-16 h-16">
                 <div className="btn-back rounded-xl" />
@@ -98,6 +101,19 @@ function About() {
                 </VerticalTimelineElement>
               ))}
             </VerticalTimeline>
+          </div>
+          <div className="mt-5 flex flex-col gap-3 text-blue-100 ml-2 pt-10">
+            <p>
+              Here's a concise overview of my React and web development journey:
+            </p>
+            <p className="mb-2">Skills highlights:</p>
+            <ul className="list-disc ml-5">
+              {highlight.map((skill) => (
+                <li key={skill.id} className="ml-2">
+                  {skill.skill}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
         <hr className="border-pink-600" />
