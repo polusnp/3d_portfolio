@@ -58,59 +58,63 @@ function Contact() {
   }
 
   return (
-    <div className="bg-[url('./assets/bg-contact.jpg')] bg-cover sm:h-[100vh] h-full">
+    <div className="bg-[url('./assets/bg-contact.jpg')] bg-cover sm:h-[100vh] h-full sm:px-20">
       <section className="max-container relative flex sm:flex-row flex-col justify-between">
         {alert.show && <Alert {...alert} />}
 
-        <div className="sm:w-1/2 w-full flex flex-col font-sans pt-32 sm:pt-28 px-10 sm:px-0">
+        <div className="sm:w-1/2 w-full flex flex-col font-sans pt-32 sm:pt-36 px-10 sm:px-0 ">
           <h1 className="head-text">Get in touch</h1>
           <form
             ref={formRef}
-            className="w-full flex flex-col gap-3 mt-4 text-xs"
+            className="w-full flex flex-col gap-3 mt-8 text-base"
             onSubmit={handleSubmit}
           >
-            <label className="text-white font-semibold text-xs">
+            <label className="text-white font-semibold text-base">
               Name
               <input
                 type="text"
                 name="name"
-                className="input text-sm"
+                className="input text-base"
                 placeholder="John"
                 required
                 value={form.name}
                 onChange={handleChange}
               />
             </label>
-            <label className="text-white font-semibold text-xs">
+            <label className="text-white font-semibold text-base">
               Email
               <input
                 type="email"
                 name="email"
-                className="input text-sm"
+                className="input text-base"
                 placeholder="john@gmail.com"
                 required
                 value={form.email}
                 onChange={handleChange}
               />
             </label>
-            <label className="text-white font-semibold text-xs">
+            <label className="text-white font-semibold text-base">
               Your message
               <textarea
                 name="message"
                 rows={4}
-                className="textarea text-xs"
+                className="textarea text-base"
                 placeholder="Let me know how I can help you"
                 required
                 value={form.message}
                 onChange={handleChange}
               />
             </label>
-            <button type="submit" className="btn text-xs" disabled={isLoading}>
+            <button
+              type="submit"
+              className="btn text-base"
+              disabled={isLoading}
+            >
               {isLoading ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>
-        <div className="sm:flex sm:w-1/2 w-full pt-36">
+        <div className="sm:flex sm:w-1/2 w-full sm:pt-52 pt-20 sm:ml-0 ml-[-20px] ">
           <Map />
         </div>
       </section>

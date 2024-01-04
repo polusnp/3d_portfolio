@@ -25,7 +25,7 @@ function Works() {
                   <div className={`btn-back rounded-xl ${project.theme}`} />
                   <div className="btn-front rounded-xl flex justify-center items-center">
                     <Link
-                      to="https://quotesmachine.netlify.app/"
+                      to={project.link}
                       rel="noopener noreferrer"
                       className="flex justify-center items-center"
                       target="_blanc"

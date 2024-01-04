@@ -194,29 +194,32 @@ export const socialLinks = [
 
 export const projects = [
   {
+    link: "https://quotesmachine.netlify.app/",
     iconUrl: quote,
     theme: "btn-back-red",
     name: "Quote Generator Machine",
     description:
       "In pursuit of my FreeCodeCamp certification, I developed a Quotes Generator Machine. This project allowed me to deepen my understanding of React components, state management, and API integration. It's not just a code exercise; it's a testament to my commitment to mastering React for real-world applications.",
-    link: "https://github.com/polusnp/random-quote-machine.git",
+    linkGit: "https://github.com/polusnp/random-quote-machine.git",
   },
   {
+    link: "https://drum-muchine.netlify.app/",
     iconUrl: quote,
     theme: "btn-back-green",
     name: "Drum Machine",
     description:
       "As part of the FreeCodeCamp curriculum, I created a Drum Machine that demonstrates my proficiency in handling user interactions and events in React. This project enabled me to delve into responsive design and create an engaging user experience.",
-    link: "https://github.com/adrianhajdin/threads",
+    linkGit: "https://github.com/polusnp/drum-machine.git",
   },
 
   {
+    link: "https://drum-muchine.netlify.app/",
     iconUrl: quote,
     theme: "btn-back-pink",
     name: "Pomodoro Timer",
     description:
       "To enhance my skills in stateful applications, I developed a Pomodoro Timer. This project challenged me to implement countdown functionality, session management, and an intuitive user interface. It reflects my dedication to creating practical tools that improve productivity.",
-    link: "https://github.com/adrianhajdin/social_media_app",
+    linkGit: "https://github.com/polusnp/drum-machine.git",
   },
 ]
 

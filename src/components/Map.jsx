@@ -9,7 +9,6 @@ import {
 
 const Map = () => {
   return (
-    // <div className="w-1/2 flex lg:w-full">
     <ComposableMap
       projection="geoAzimuthalEqualArea"
       projectionConfig={{
