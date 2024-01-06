@@ -103,9 +103,6 @@ function About() {
             </VerticalTimeline>
           </div>
           <div className="mt-5 flex flex-col gap-3 text-blue-100 ml-2 pt-10">
-            <p>
-              Here's a concise overview of my React and web development journey:
-            </p>
             <p className="mb-2">Skills highlights:</p>
             <ul className="list-disc ml-5">
               {highlight.map((skill) => (
