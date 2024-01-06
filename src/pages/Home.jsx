@@ -15,9 +15,6 @@ function Home() {
     let screenPosition = [20, 0, -200]
     let rotation = [0, 0, 0]
 
-    // let screenPosition = [0, -5, -43]
-    // let rotation = [0.5, 6, 0]
-
     if (window.innerWidth < 768) {
       screenScale = [1, 1, 1]
     } else {
@@ -43,14 +40,6 @@ function Home() {
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
-          {/* <directionalLight position={[1, -1, -1]} intensity={1} />
-
-          <hemisphereLight
-            skyColor="#b1e1ff"
-            groundColor="#000000"
-            intensity={1}
-          /> */}
-
           <Space
             rotation={spaceRotation}
             position={spacePosition}
