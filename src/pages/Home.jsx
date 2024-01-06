@@ -1,7 +1,7 @@
 import { Suspense, useState } from "react"
 import { Canvas } from "@react-three/fiber"
 import Loader from "../components/Loader"
-import Space from "../models/Space"
+import Space from "../components/Space"
 import HomeInfo from "../components/HomeInfo"
 import StartInfo from "../components/StartInfo"
 
