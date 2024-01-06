@@ -2,6 +2,7 @@ import { useRef, useEffect } from "react"
 import { useGLTF } from "@react-three/drei"
 import { useFrame, useThree } from "@react-three/fiber"
 import { a } from "@react-spring/three"
+import { useDrag } from "@use-gesture/react"
 import spaceScene from "../assets/space.glb"
 
 function Space({
@@ -12,7 +13,6 @@ function Space({
   ...props
 }) {
   const spaceRef = useRef()
-
   const { gl, viewport } = useThree()
   const { nodes, materials } = useGLTF(spaceScene)
 
@@ -83,6 +83,26 @@ function Space({
     }
   }
 
+  const bind = useDrag(
+    ({ movement: [deltaX], down, event }) => {
+      event.stopPropagation()
+      event.preventDefault()
+
+      if (down) {
+        setIsRotating(true)
+
+        // Update the island's rotation based on touch movement
+        spaceRef.current.rotation.y += deltaX / viewport.width
+
+        // Update the rotation speed
+        rotationSpeed.current = deltaX / viewport.width
+      } else {
+        setIsRotating(false)
+      }
+    },
+    { pointerEvents: true }
+  )
+
   useEffect(() => {
     // Add event listeners for pointer and keyboard events
     const canvas = gl.domElement
@@ -92,6 +112,7 @@ function Space({
     window.addEventListener("keydown", handleKeyDown)
     window.addEventListener("keyup", handleKeyUp)
 
+    bind()
     // Remove event listeners when component unmounts
     return () => {
       canvas.removeEventListener("pointerdown", handlePointerDown)
@@ -100,7 +121,7 @@ function Space({
       window.removeEventListener("keydown", handleKeyDown)
       window.removeEventListener("keyup", handleKeyUp)
     }
-  }, [gl, handlePointerDown, handlePointerUp, handlePointerMove])
+  }, [gl, bind, handlePointerDown, handlePointerUp, handlePointerMove])
 
   useFrame(() => {
     if (!isRotating) {
