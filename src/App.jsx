@@ -6,7 +6,7 @@ import FixedIconHome from "./components/FixedIconHome"
 
 const App = () => {
   return (
-    <main className="bg-slate-900">
+    <main className="bg-[url('./assets/bg-contact.jpg')] bg-cover">
       <Router>
         <Navbar />
         <FixedIconHome />
