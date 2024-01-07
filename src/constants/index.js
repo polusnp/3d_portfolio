@@ -213,12 +213,12 @@ export const projects = [
   },
 
   {
-    link: "https://drum-muchine.netlify.app/",
+    link: "https://todo-polusnp.netlify.app/",
     iconUrl: quote,
     theme: "btn-back-pink",
-    name: "Pomodoro Timer",
+    name: "ToDo List",
     description:
-      "To enhance my skills in stateful applications, I developed a Pomodoro Timer. This project challenged me to implement countdown functionality, session management, and an intuitive user interface. It reflects my dedication to creating practical tools that improve productivity.",
+      "I designed and implemented a ToDo List application to delve into the essentials of task management using React. This project provided hands-on experience with state manipulation, form handling, and basic CRUD operations. It showcases my commitment to creating simple yet effective solutions.",
     linkGit: "https://github.com/polusnp/drum-machine.git",
   },
 ]

@@ -48,6 +48,14 @@ function Works() {
             </div>
           ))}
         </div>
+        <div>
+          <p className="mt-5 flex flex-col gap-3 text-blue-100 ml-2">
+            As I continue to grow and refine my skills, I am eager to contribute
+            to impactful projects and collaborate with like-minded developers.
+            If you have any questions or insights, please don't hesitate to
+            reach out.
+          </p>
+        </div>
       </section>
     </div>
   )
