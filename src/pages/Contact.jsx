@@ -62,11 +62,11 @@ function Contact() {
       <section className="max-container relative flex sm:flex-row flex-col justify-between">
         {alert.show && <Alert {...alert} />}
 
-        <div className="sm:w-1/2 w-full flex flex-col font-sans pt-32 sm:pt-36 px-10 sm:px-0 ">
+        <div className="sm:w-1/2 w-full flex flex-col font-sans pt-16 sm:pt-36 px-10 sm:px-0 ">
           <h1 className="head-text">Get in touch</h1>
           <form
             ref={formRef}
-            className="w-full flex flex-col gap-3 mt-8 text-base"
+            className="w-full flex flex-col sm:gap-3 gap-1 sm:mt-8 mt-4 text-base"
             onSubmit={handleSubmit}
           >
             <label className="text-white font-semibold text-base">
@@ -97,7 +97,7 @@ function Contact() {
               Your message
               <textarea
                 name="message"
-                rows={4}
+                rows={window.innerWidth < 640 ? 2 : 4}
                 className="textarea text-base"
                 placeholder="Let me know how I can help you"
                 required
@@ -114,7 +114,7 @@ function Contact() {
             </button>
           </form>
         </div>
-        <div className="sm:flex sm:w-1/2 w-full sm:pt-52 pt-20 sm:ml-0 ml-[-20px] ">
+        <div className="sm:flex sm:w-1/2 w-full sm:pt-52 pt-10 sm:ml-0 ml-[-20px] ">
           <Map />
         </div>
       </section>
