@@ -25,6 +25,8 @@ import soundon from "./soundon.png"
 import soundoff from "./soundoff.png"
 import softserve from "./softserve.png"
 import ks from "./ks.jpg"
+import drum from "./drum.png"
+import todo from "./todo.png"
 
 export {
   css,
@@ -51,4 +53,6 @@ export {
   soundon,
   soundoff,
   meta,
+  todo,
+  drum,
 }

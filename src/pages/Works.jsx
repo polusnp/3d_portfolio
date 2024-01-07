@@ -1,5 +1,6 @@
 import { projects } from "../constants"
 import { Link } from "react-router-dom"
+import { FaArrowRight } from "react-icons/fa"
 
 function Works() {
   return (
@@ -14,7 +15,7 @@ function Works() {
           </p>
         </div>
 
-        <div className="flex flex-wrap my-20 gap-20 sm:my-40 sm:gap-40">
+        <div className="flex flex-wrap my-20 gap-20 sm:gap-36">
           {projects.map((project) => (
             <div
               className="w-full flex sm:flex-row flex-col justify-center items-center"
@@ -28,7 +29,7 @@ function Works() {
                       to={project.link}
                       rel="noopener noreferrer"
                       className="flex justify-center items-center"
-                      target="_blanc"
+                      target="_blank"
                     >
                       <img
                         src={project.iconUrl}
@@ -39,17 +40,28 @@ function Works() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col sm:w-1/2 w-full justify-center items-center z-10">
-                <h4 className="text-blue-100 text-lg mt-6">{project.name}</h4>
-                <p className="text-blue-100 text-sm mt-6 text-center">
+              <div className="flex mt-4 sm:mt-0 flex-col sm:w-1/2 w-full justify-center items-center z-10">
+                <h4 className="text-blue-100 text-lg">{project.name}</h4>
+                <p className="text-blue-100 text-sm my-4 text-center">
                   {project.description}
                 </p>
+
+                <Link
+                  to={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex gap-4 flex-row justify-center items-center font-semibold text-blue-100 hover:text-pink-500">
+                    Live Link
+                    <FaArrowRight />
+                  </div>
+                </Link>
               </div>
             </div>
           ))}
         </div>
         <div>
-          <p className="mt-5 flex flex-col gap-3 text-blue-100 ml-2">
+          <p className="mt-5 flex flex-col gap-3 text-pink-500 ml-2 font-bold">
             As I continue to grow and refine my skills, I am eager to contribute
             to impactful projects and collaborate with like-minded developers.
             If you have any questions or insights, please don't hesitate to

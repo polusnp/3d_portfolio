@@ -22,6 +22,8 @@ import {
   typescript,
   fcc,
   softserve,
+  todo,
+  drum,
 } from "../assets/icons"
 
 export const skills = [
@@ -204,7 +206,7 @@ export const projects = [
   },
   {
     link: "https://drum-muchine.netlify.app/",
-    iconUrl: quote,
+    iconUrl: drum,
     theme: "btn-back-green",
     name: "Drum Machine",
     description:
@@ -214,12 +216,12 @@ export const projects = [
 
   {
     link: "https://todo-polusnp.netlify.app/",
-    iconUrl: quote,
+    iconUrl: todo,
     theme: "btn-back-pink",
     name: "ToDo List",
     description:
       "I designed and implemented a ToDo List application to delve into the essentials of task management using React. This project provided hands-on experience with state manipulation, form handling, and basic CRUD operations. It showcases my commitment to creating simple yet effective solutions.",
-    linkGit: "https://github.com/polusnp/drum-machine.git",
+    linkGit: "https://github.com/polusnp/todolist.git",
   },
 ]
 
