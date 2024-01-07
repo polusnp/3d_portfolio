@@ -12,13 +12,13 @@ function Home() {
 
   const adjustSpaceForScreenSize = () => {
     let screenScale = null
-    let screenPosition = [20, 0, -200]
+    let screenPosition = [0, 0, -200]
     let rotation = [0, 0, 0]
 
     if (window.innerWidth < 768) {
-      screenScale = [1, 1, 1]
+      screenScale = [0.13, 0.13, 0.13]
     } else {
-      screenScale = [0.4, 0.4, 0.4]
+      screenScale = [0.3, 0.3, 0.3]
     }
     return [screenScale, screenPosition, rotation]
   }

@@ -109,6 +109,9 @@ function Space({
     canvas.addEventListener("pointerdown", handlePointerDown)
     canvas.addEventListener("pointerup", handlePointerUp)
     canvas.addEventListener("pointermove", handlePointerMove)
+    canvas.addEventListener("touchstart", handlePointerDown)
+    canvas.addEventListener("touchend", handlePointerUp)
+    canvas.addEventListener("touchmove", handlePointerMove)
     window.addEventListener("keydown", handleKeyDown)
     window.addEventListener("keyup", handleKeyUp)
 
@@ -118,6 +121,9 @@ function Space({
       canvas.removeEventListener("pointerdown", handlePointerDown)
       canvas.removeEventListener("pointerup", handlePointerUp)
       canvas.removeEventListener("pointermove", handlePointerMove)
+      canvas.removeEventListener("touchstart", handlePointerDown)
+      canvas.removeEventListener("touchend", handlePointerUp)
+      canvas.removeEventListener("touchmove", handlePointerMove)
       window.removeEventListener("keydown", handleKeyDown)
       window.removeEventListener("keyup", handleKeyUp)
     }
