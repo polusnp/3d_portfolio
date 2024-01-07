@@ -27,6 +27,7 @@ import softserve from "./softserve.png"
 import ks from "./ks.jpg"
 import drum from "./drum.png"
 import todo from "./todo.png"
+import favicon from "./favicon.png"
 
 export {
   css,
@@ -55,4 +56,5 @@ export {
   meta,
   todo,
   drum,
+  favicon,
 }
