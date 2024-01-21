@@ -47,12 +47,24 @@ function Works() {
                 </p>
 
                 <Link
+                  className="animate-pulse"
                   to={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <div className="flex gap-4 flex-row justify-center items-center font-semibold text-blue-100 hover:text-pink-500">
                     Live Link
+                    <FaArrowRight />
+                  </div>
+                </Link>
+                <Link
+                  className="animate-pulse"
+                  to={project.linkGit}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex gap-4 flex-row justify-center items-center font-semibold text-blue-100 hover:text-pink-500">
+                    GitHub
                     <FaArrowRight />
                   </div>
                 </Link>

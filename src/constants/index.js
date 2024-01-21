@@ -24,6 +24,7 @@ import {
   softserve,
   todo,
   drum,
+  radio,
 } from "../assets/icons"
 
 export const skills = [
@@ -196,6 +197,24 @@ export const socialLinks = [
 
 export const projects = [
   {
+    link: "https://radiobox.netlify.app/",
+    iconUrl: radio,
+    theme: "btn-back-green",
+    name: "Radio Box",
+    description:
+      "React Radio Box is a user-friendly online streaming music player, utilizing a simple API for seamless music enjoyment. Its adaptive interface ensures an effortless and enjoyable experience, allowing users to dive into their favorite tunes effortlessly. Streamlined and intuitive, React Radio Box makes music playback a breeze with just a few clicks.",
+    linkGit: "https://github.com/polusnp/box_radio_react",
+  },
+  {
+    link: "https://todo-polusnp.netlify.app/",
+    iconUrl: todo,
+    theme: "btn-back-pink",
+    name: "ToDo List",
+    description:
+      "I designed and implemented a ToDo List application to delve into the essentials of task management using React. This project provided hands-on experience with state manipulation, form handling, and basic CRUD operations. It showcases my commitment to creating simple yet effective solutions.",
+    linkGit: "https://github.com/polusnp/todolist.git",
+  },
+  {
     link: "https://quotesmachine.netlify.app/",
     iconUrl: quote,
     theme: "btn-back-red",
@@ -212,16 +231,6 @@ export const projects = [
     description:
       "As part of the FreeCodeCamp curriculum, I created a Drum Machine that demonstrates my proficiency in handling user interactions and events in React. This project enabled me to delve into responsive design and create an engaging user experience.",
     linkGit: "https://github.com/polusnp/drum-machine.git",
-  },
-
-  {
-    link: "https://todo-polusnp.netlify.app/",
-    iconUrl: todo,
-    theme: "btn-back-pink",
-    name: "ToDo List",
-    description:
-      "I designed and implemented a ToDo List application to delve into the essentials of task management using React. This project provided hands-on experience with state manipulation, form handling, and basic CRUD operations. It showcases my commitment to creating simple yet effective solutions.",
-    linkGit: "https://github.com/polusnp/todolist.git",
   },
 ]
 

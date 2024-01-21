@@ -18,7 +18,7 @@ import linkedin from "./linkedin.svg"
 import meta from "./meta.png"
 
 import quote from "./quote.png"
-
+import radio from "./radio.jpg"
 import fcc from "./fcc.png"
 import contact from "./contact.svg"
 import soundon from "./soundon.png"
@@ -57,4 +57,5 @@ export {
   todo,
   drum,
   favicon,
+  radio,
 }
